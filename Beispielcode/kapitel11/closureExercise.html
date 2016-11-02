@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Übung zu Closures</title>
+<script>
+
+// 1.
+function makePassword(password) {
+	return function guess(passwordGuess) {
+		return (passwordGuess === password);
+	};
+}
+
+var tryGuess = makePassword("geheim");
+console.log("Rate 'keins': "  + tryGuess("keins"));
+console.log("Rate 'geheim': " + tryGuess("geheim"));
+##ergänze:##
+tryGuess("geheim"));
+
+// 2.
+function multN(n) {
+	return function multBy(m) {
+		return n*m;
+	};
+}
+
+var multBy3 = multN(3);
+console.log("Multipliziere 2: " + multBy3(2));
+console.log("Multipliziere 3: " + multBy3(3));
+
+
+// 3.
+function makeCounter() {
+	var count = 0;
+
+	return {
+		count: function() {
+			count++;
+			return count;
+		}
+	};
+}
+
+var counter = makeCounter();
+console.log(counter.count());
+console.log(counter.count());
+console.log(counter.count());
+
+
+</script> 
+</head> 
+<body> </body>
+</html>
+

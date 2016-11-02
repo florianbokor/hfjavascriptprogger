@@ -1,0 +1,26 @@
+<!doctype html> 
+<html lang="de"> 
+<head>
+<meta charset="utf-8"> 
+<title>Planeten</title> 
+<style>
+	.warnmeldung { color: red; } 
+</style>
+</head>
+<body>
+<h1>Grüner Planet</h1>
+<p id="gruener_planet">Alles in Ordnung</p> 
+<h1>Roter Planet</h1>
+<p id="roter_planet">Nichts zu berichten</p> 
+<h1>Blauer Planet</h1>
+<p id="blauer_planet">Alle Systeme OK</p>
+<script>
+function init() {
+	var planet = document.getElementById("gruener_planet");
+	planet.innerHTML = "Roter Alarm: vom Phaser getroffen!"; 
+	planet.setAttribute("class", "warnmeldung");
+}
+window.onload = init;
+</script>
+</body>
+</html>

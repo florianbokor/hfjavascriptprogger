@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Phras-O-Mat</title>
+  <script>
+    function makePhrases() {
+      var words1 = ["Kundenfreundliche", "Wertgesteigerte", "Marktorientierte", "Fokussierte", "Angepasste"];
+      var words2 = ["24/7", "mehrschichtige", "responsive", "mobile-first", "win-win"];
+      var words3 = ["Benutzererfahrung", "Lösung", "Trendwende", "Strategie", "Killer-App"];
+
+      var rand1 = Math.floor(Math.random() * words1.length);
+      var rand2 = Math.floor(Math.random() * words2.length);
+      var rand3 = Math.floor(Math.random() * words3.length);
+
+      var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+      alert(phrase);
+    }
+    makePhrases();
+  </script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<title>Schatzkarte</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		window.onload = init; 
+		function init() {
+			var map = document.getElementById("map");
+			map.onmousemove = showCoords;
+		}
+		function showCoords(eventObj) {
+			var braz = document.getElementById("coords");
+			var x = eventObj.clientX;
+			var y = eventObj.clientY;
+			braz.innerHTML = "Koordinaten: " + x + ", " + y;
+		}
+		function timerHandler() {
+			alert("Warum starren Sie so lange auf den Bildschirm?")
+		}
+		setTimeout(timerHandler, 2500);
+/*		var tick = true;
+		function ticker() {
+			if (tick) {
+				console.log("Tick");
+				tick = false;
+			} else {
+				console.log("Tack");
+				tick = true;
+			}
+		}
+		setInterval(ticker, 1000);*/
+	</script>
+</head>
+<body>
+<!-- 	<h1>Schatzkarte</h1> -->
+	<img id="map" src="Beispielcode/Kapitel09/map.jpg">
+	<p id="coords">Bewegen sie die Maus über die Karte um die Koordinaten zu finden.</p>
+</body> 

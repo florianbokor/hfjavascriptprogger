@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Datentypen</title>
+  <script>
+
+// Lügendetektor
+function lieDetectorTest() {
+	var lies = 0;
+
+	// Getohlener Diamant
+	var stolenDiamond = { };
+	if (stolenDiamond) {
+    	console.log("Sie haben den Diamanten gestohlen");
+		lies++;
+	}
+
+	// Auto
+	var car = {
+			// Schlüssel in der Tasche
+    	keysInPocket: null
+	};
+	if (car.keysInPocket) {
+    	console.log("Ich glaube, Sie haben das Auto gestohlen!");
+		lies++;
+	}
+	// leerer Tank
+	if (car.emptyGasTank) {
+    	console.log("Sie haben das Auto nach dem Diebstahl gefahren!");
+		lies++;
+	}
+
+	// Am Ort des Verbrechens anwesend
+	var foundYouAtTheCrimeScene = [ ];
+	if (foundYouAtTheCrimeScene) {
+    	console.log("Ein sicheres Zeichen für Ihre Schuld");
+		lies++;
+	}
+	if (foundYouAtTheCrimeScene[0]) {
+    	console.log("Mit Diebesgut erwischt!");
+		lies++;
+	}
+
+	var yourName = " ";
+	if (yourName) {
+    	console.log("Sie haben einen falschen Namen angegeben");
+		lies++;
+	}
+	return lies;
+}
+
+// Anzahl der Lügen
+var numberOfLies = lieDetectorTest();
+console.log("Sie haben " + numberOfLies + " mal gelogen!");
+
+// mehr als dreimal gelogen
+if (numberOfLies >= 3) {
+	console.log("Schuldig im Sinne der Anklage");
+}
+
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Klick mich!</title>
+<style> 
+  body, button { margin: 10px; } 
+  div { padding: 10px; }
+</style>
+<script>
+
+/*
+//
+// Die Version ohne Closure...
+//
+var count = 0;
+window.onload = function() {
+  var button = document.getElementById("clickme");
+  button.onclick = handleClick;
+};
+
+function handleClick() {
+  var message = "Sie haben mich ";
+  var div = document.getElementById("message");
+  count++;
+  div.innerHTML = message + count + " mal angeklickt!";
+}
+*/
+
+//
+// Die Version mit Closure.
+//
+window.onload = function() {
+  var count = 0; 
+  var message = "Sie haben mich ";
+  var div = document.getElementById("message");
+
+  var button = document.getElementById("clickme");
+  button.onclick = function() {
+    count++;
+    div.innerHTML = message + count + " mal angeklickt!";
+  };
+};
+
+</script> 
+</head> 
+<body>
+  <button id="clickme">Klick mich!</button>
+  <div id="message"></div>
+</body>
+</html>
+

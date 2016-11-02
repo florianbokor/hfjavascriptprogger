@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Extreme JavaScript-Aufgabe</title>
+<script>
+
+var justAVar = "Keine Sorge, ich bin GLOBAL";
+
+function whereAreYou() {
+	var justAVar = "Eine schlichte LOKALE Variable";
+
+	function inner() {
+		return justAVar;
+	}
+
+	return inner;
+}
+
+var innerFunction = whereAreYou();
+var result = innerFunction();
+console.log(result);
+
+</script>
+</head>
+<body> </body>
+</html>
+

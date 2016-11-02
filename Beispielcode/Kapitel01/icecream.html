@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Eis!</title>
+  </head>
+  <body>
+  </body>
+  <script>
+	scoops = 5;
+	while (scoops > 0) {
+		document.write("Noch eine Kugel!<br>");
+		if (scoops < 3) {
+			alert("Gleich ist das Eis alle!");
+		} else if (scoops >= 5) {
+			alert("Essen Sie schneller. Das Eis schmilzt gleich!");
+		}
+		scoops = scoops - 1;
+	}
+	document.write("Ohne Eis ist das Leben nicht halb so schön.");
+  </script>
+</body>
+</html>
+

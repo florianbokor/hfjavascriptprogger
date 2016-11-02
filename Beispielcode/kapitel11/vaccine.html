@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Übung zu Funktionen erster Klasse</title>
+<script>
+
+//
+// Zum Testen:
+//
+function administer(name, vaccine, time) {
+	var dosage = 10;
+	console.log("Nächster Impftermin für " + name + ": " + time);
+	vaccine(dosage);
+}
+function inject(dosage) {
+	console.log("Verabreiche " + dosage + "ml");
+}
+var patient = "Fido";
+var time = "5 minutes";
+
+// wird nicht mehr gebraucht...
+/*
+function vaccine(dosage) {
+    if (dosage > 0) {
+        inject(dosage);
+    }
+}
+*/
+
+//
+// Lösung:
+//
+administer(patient, function(dosage) { 
+	if (dosage > 0) {
+		inject(dosage);
+	}
+}, time);
+
+
+</script> 
+</head> 
+<body> </body>
+</html>
+

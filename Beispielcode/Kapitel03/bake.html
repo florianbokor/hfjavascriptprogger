@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Backen (mit return)</title>
+  </head>
+  <body>
+
+  <script>
+function bake(degrees) {
+    var message;
+
+    if (degrees > 500) {
+        message = "Ich bin doch kein Atomreaktor!";
+    } else if (degrees < 100) {
+        message = "Ich bin doch kein Kühlschrank!";
+    } else {
+        message = "Das ist eine angenehme Temperatur für mich.";
+        setMode("backen");
+        setTemp(degrees);
+    }
+    return message;
+}
+
+var status = bake(350);
+
+// Here so the code will run!
+function setMode(mode) { };
+function setTemp(degrees) { };
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* 
+	Style für's Schiffe versenken
+*/
+
+body {
+	background-color: black;
+}
+div#board {
+	position: relative;
+	width: 1024px;
+	height: 863px;
+	margin: auto;
+	background: url('Beispielcode/Kapitel08/board.jpg') no-repeat;
+}
+div#messageArea {
+	font-family: sans-serif;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #53af13;
+}
+table {
+	position: absolute;
+	left: 173px;
+	top: 98px;
+	border-spacing: 0;
+}
+td {
+	width: 94px;
+	height: 94px;
+}
+form {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 15px;
+	background-color: #53af13;
+}
+form input {
+	background-color: #98cf13;
+	border-color: #53af13;
+	font-size: 1em;
+}
+.hit {
+	background: url('Beispielcode/Kapitel08/ship.png') no-repeat center center;
+}
+.miss {
+	background: url('Beispielcode/Kapitel08/miss.png') no-repeat center center;
+}

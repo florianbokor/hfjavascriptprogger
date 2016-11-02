@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Schatzkarte</title>
+  <script>
+	window.onload = init;
+	function init() {
+		var map = document.getElementById("map");
+		map.onmousemove = showCoords;
+	}
+	
+	function showCoords(eventObj) {
+		var map = document.getElementById("coords");
+		var x = eventObj.clientX;
+		var y = eventObj.clientY;
+		map.innerHTML = "Koordinaten: " + x + ", " + y;
+	}
+  </script>
+</head>
+<body>
+	<img id="map" src="map.jpg">
+	<p id="coords">Bewegen Sie die Maus über die Karte, um die Koordinaten zu finden…</p>
+</body>
+</html>

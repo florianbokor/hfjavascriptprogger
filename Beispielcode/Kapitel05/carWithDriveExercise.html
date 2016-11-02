@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Alle Autos fahren</title>
+<script>
+
+var fiat = { 
+	make: "Fiat",
+	model: "500",
+	year: 1957, 
+	color: "graublau",
+	passengers: 2,
+	convertible: false,
+	mileage: 88000,
+	started: false,
+	start: function() {
+		this.started = true;
+	},
+	stop: function() {
+		this.started = false;
+	},
+	drive: function() {
+		if (this.started) {
+			alert(this.make + " " + 
+			      this.model + " macht wrumm wrumm!");
+		} else {
+			alert("Sie müssen erst den Motor starten.");
+		}
+	}
+};
+
+var cadi = {
+	make: "GM",
+	model: "Cadillac",
+	year: 1955, 
+	color: "lohfarben",
+	passengers: 5,
+	convertible: false,
+	mileage: 12892,
+	started: false,
+	start: function() {
+		this.started = true;
+	},
+	stop: function() {
+		this.started = false;
+	},
+	drive: function() {
+		if (this.started) {
+			alert(this.make + " " + 
+			      this.model + " macht wrumm wrumm!");
+		} else {
+			alert("Sie müssen erst den Motor starten.");
+		}
+	}
+};
+
+
+var chevy = { 
+	make: "Chevy",
+	model: "Bel Air",
+	year: 1957, 
+	color: "rot",
+	passengers: 2,
+	convertible: false,
+	mileage: 1021,
+	started: false,
+	start: function() {
+		this.started = true;
+	},
+	stop: function() {
+		this.started = false;
+	},
+	drive: function() {
+		if (this.started) {
+			alert(this.make + " " + 
+			      this.model + " macht wrumm wrumm!");
+		} else {
+			alert("Sie müssen erst den Motor starten.");
+		}
+	}
+};
+
+
+
+var taxi = { 
+    make: "WebVille Motors",
+    model: "Taxi",
+    year: 1955,
+    color: "gelb",
+    passengers: 4,
+    convertible: false,
+    mileage: 281341,
+	started: false,
+	start: function() {
+		this.started = true;
+	},
+	stop: function() {
+		this.started = false;
+	},
+	drive: function() {
+		if (this.started) {
+			alert(this.make + " " + 
+			      this.model + " macht wrumm wrumm!");
+		} else {
+			alert("Sie müssen erst den Motor starten.");
+		}
+	}
+};
+
+fiat.start();
+fiat.drive();
+fiat.stop();
+
+cadi.start();
+cadi.drive();
+cadi.stop();
+
+chevy.start();
+chevy.drive();
+chevy.stop();
+
+taxi.start();
+taxi.drive();
+taxi.stop();
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

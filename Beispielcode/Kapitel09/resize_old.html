@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Ändern Sie nicht meine Größe. Ich bin kitzlig!</title>
+<script>
+/*
+	##
+	- Hier wird der Parameter (e) definiert, aber in der Funktion nicht genutzt. Soll das so?
+	- innerHTML wird nicht ausgewertet. Es erscheint nur der String "das kitzelt"
+	##
+*/
+    function resize(e) {
+        var element = document.getElementById("display");
+        element.innerHTML = element.innerHTML + " das kitzelt!";
+    }
+</script>
+</head>
+<body>
+<p id="display">
+    Verändern Sie auf keine Fall die Fenstergröße! Ich habe Sie gewarnt!
+</p>
+<script>
+    window.onresize = resize;
+</script>
+</body>
+</html>

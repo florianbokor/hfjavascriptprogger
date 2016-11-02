@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+<head>
+<title>Vorauswahl</title>
+<meta charset="utf-8">
+<script>
+
+var chevy = { 
+	make: "Chevy",
+	model: "Bel Air",
+	year: 1957, 
+	color: "rot",
+	passengers: 2,
+	convertible: false,
+	mileage: 1021
+};
+
+var fiat = { 
+	make: "Fiat",
+	model: "500",
+	year: 1957, 
+	color: "graublau",
+	passengers: 2,
+	convertible: false,
+	mileage: 88000
+};
+
+var cadi = {
+	make: "GM",
+	model: "Cadillac",
+	year: 1955, 
+	color: "lohfarben",
+	passengers: 5,
+	convertible: false,
+	mileage: 12892
+};
+
+
+var taxi = { 
+    make: "WebVille Motors",
+    model: "Taxi",
+    year: 1955,
+    color: "gelb",
+    passengers: 4,
+    convertible: false,
+    mileage: 281341
+};
+
+function prequal(car) {
+    if (car.mileage > 10000) {
+        return false;
+    } else if (car.year > 1960) {
+        return false;
+    }
+    return true;
+}
+
+var worthALook = prequal(taxi);
+
+if (worthALook) {
+    console.log("Diesen " + taxi.make + " " + taxi.model + " müssen Sie sich ansehen!");
+} else {
+    console.log("Den " + taxi.make + " " + taxi.model + " können Sie vergessen!");
+}
+
+//
+// eine Funktion, um die Ausgaben auf der Konsole zu vereinfachen!
+//
+function isWorthALook(didQualify, car) {
+	if (didQualify) {
+		console.log("Den Wagen " + taxi.make + " " + taxi.model + " müssen Sie sich ansehen!");
+	} else {
+    console.log("Den Wagen  " + taxi.make + " " + taxi.model + " können Sie vergessen!");
+	}
+}
+isWorthALook(prequal(taxi), taxi);
+isWorthALook(prequal(cadi), cadi);
+isWorthALook(prequal(chevy), chevy);
+isWorthALook(prequal(fiat), fiat);
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

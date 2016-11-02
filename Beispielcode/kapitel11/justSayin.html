@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Übung zu freien Variablen</title>
+<script>
+
+// Dieser Code funktioniert nicht, weil justSayin eine Umgebung
+// braucht, um seine freien Variablen wieder zu "schließen".
+
+function justSayin(phrase) {
+	var ending = "";
+	if (beingFunny) {
+		ending = " -- Ich meine ja nur…!";
+	} else if (notSoMuch) {
+		ending = " -- Eher nicht.";
+	}
+	alert(phrase + ending);
+}
+
+justSayin("Hallo Welt!");
+
+</script>
+</head>
+<body> </body>
+</html>
+

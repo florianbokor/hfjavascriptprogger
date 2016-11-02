@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Ändern Sie nicht meine Größe. Ich bin kitzlig!</title>
+<script>
+/* ##an Code im Buch angepasst## */
+    function resize() {
+        var element = document.getElementById("display");
+        element.innerHTML = element.innerHTML + " das kitzelt!";
+    }
+</script>
+</head>
+<body>
+<p id="display">
+    Verändern Sie auf keinen Fall die Fenstergröße! Ich habe Sie gewarnt!
+</p>
+<script>
+    window.onresize = resize;
+</script>
+</body>
+</html>
